@@ -157,7 +157,7 @@
             transition: all 0.3s ease;
         }
 
-        /* Main Featured Characters Grid (Dikecilkan & Pas untuk HP) */
+        /* Main Featured Characters Grid */
         .main-char-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -195,8 +195,8 @@
         .main-char-img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            object-position: center;
+            object-fit: cover;
+            object-position: top center;
             transition: transform 0.5s ease;
         }
 
@@ -279,10 +279,10 @@
             line-height: 1.3;
         }
 
-        /* Comic Section Fix (Gambar Utuh Tidak Kepotong) */
+        /* FIX GAMBAR KOMIK PADAT & FULL TANPA HITAM DI SAMPING */
         .comic-box {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 16px;
             text-align: left;
         }
@@ -304,14 +304,14 @@
             display: block;
             text-decoration: none;
             overflow: hidden;
-            background: #000;
+            width: 100%;
         }
 
         .comic-cover-img {
             width: 100%;
-            height: auto;
-            max-height: 300px;
-            object-fit: contain;
+            height: 340px; /* Dipertinggi sedikit agar menampilkan lebih banyak area komik */
+            object-fit: cover; /* Mengisi penuh kartu tanpa sisa hitam di pinggir */
+            object-position: top center; /* Fokus pada judul & wajah karakter */
             display: block;
             transition: transform 0.4s ease;
         }
@@ -321,7 +321,7 @@
         }
 
         .comic-cover-placeholder {
-            height: 200px;
+            height: 340px;
             background: linear-gradient(135deg, #111, #1a2e1b);
             display: flex;
             align-items: center;
@@ -543,7 +543,6 @@
             <h2 class="section-title">MEET THE CAST</h2>
             <p class="section-desc">The minds behind the story & the universe.</p>
 
-            <!-- MAIN CHARACTERS (KOMPAK & RAPI DI HP) -->
             <div class="main-char-grid">
                 <!-- VLAD -->
                 <div class="main-char-card">
@@ -570,7 +569,6 @@
                 </div>
             </div>
 
-            <!-- SECONDARY CHARACTERS -->
             <p style="color: var(--green); font-size: 0.75rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin: 25px 0 12px 0;">
                 THE REST OF THE UNIVERSE
             </p>
@@ -600,7 +598,6 @@
 
             <div class="comic-box">
                 <div class="comic-card">
-                    <!-- SAMPUL BISA DIKLIK (FULL TANPA KEPOTONG) -->
                     <a href="comic-ch1.html" class="comic-cover-link">
                         <img src="images/cover.png" alt="Chapter 01 Cover" class="comic-cover-img">
                     </a>
