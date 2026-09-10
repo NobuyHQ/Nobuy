@@ -112,6 +112,7 @@
             width: 100%;
             max-width: 220px;
             font-size: 0.95rem;
+            display: inline-block;
         }
 
         .btn:hover {
@@ -179,7 +180,6 @@
             box-shadow: 0 0 25px var(--green-glow);
         }
 
-        /* Dibuat Persegi Simetris & Auto Adaptif */
         .main-char-img-wrap {
             width: 100%;
             height: auto;
@@ -189,7 +189,6 @@
             position: relative;
         }
 
-        /* Gambar Dipaksa Masuk Semua Tanpa Kepotong */
         .main-char-img {
             width: 100%;
             height: 100%;
@@ -298,8 +297,27 @@
             border-color: var(--green);
         }
 
+        .comic-cover-link {
+            display: block;
+            text-decoration: none;
+            overflow: hidden;
+        }
+
+        .comic-cover-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .comic-cover-link:hover .comic-cover-img {
+            transform: scale(1.05);
+        }
+
         .comic-cover-placeholder {
-            height: 180px;
+            height: 220px;
             background: linear-gradient(135deg, #111, #1a2e1b);
             display: flex;
             align-items: center;
@@ -496,7 +514,8 @@
             <p class="tagline">No fee. No mercy.<br><span class="highlight">Two roommates. One crazy idea. A financial revolution.</span></p>
 
             <div class="btn-group">
-                <a href="#comic" class="btn">Read The Comic</a>
+                <!-- TERHUBUNG KE HALAMAN KOMIK -->
+                <a href="comic-ch1.html" class="btn">Read The Comic</a>
                 <a href="https://x.com/NobuyHQ" target="_blank" class="btn btn-outline">Join Twitter (X)</a>
             </div>
         </header>
@@ -578,19 +597,21 @@
 
             <div class="comic-box">
                 <div class="comic-card">
-                    <div class="comic-cover-placeholder">
-                        [ Chapter 01 Cover ]
-                    </div>
+                    <!-- SAMPUL BISA DIKLIK LANGSUNG -->
+                    <a href="comic-ch1.html" class="comic-cover-link">
+                        <img src="images/cover.png" alt="Chapter 01 Cover" class="comic-cover-img">
+                    </a>
                     <div class="comic-info">
                         <h4>Chapter 01</h4>
                         <h3>The Beginning</h3>
                         <p>Two Stanford roommates in a crowded dorm room. Wall Street wasn't ready for what they wrote on the whiteboard.</p>
-                        <a href="https://x.com/NobuyHQ" target="_blank" class="btn" style="padding: 10px 18px; font-size: 0.8rem; max-width: 100%;">Read Chapter 01 →</a>
+                        <!-- TOMBOL BACA TERHUBUNG KE KOMIK -->
+                        <a href="comic-ch1.html" class="btn" style="padding: 10px 18px; font-size: 0.8rem; max-width: 100%;">Read Chapter 01 →</a>
                     </div>
                 </div>
 
                 <div class="comic-card" style="opacity: 0.6;">
-                    <div class="comic-cover-placeholder" style="background: #111;">
+                    <div class="comic-cover-placeholder">
                         [ Chapter 02 Cover ]
                     </div>
                     <div class="comic-info">
