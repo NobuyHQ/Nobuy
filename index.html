@@ -279,7 +279,7 @@
             line-height: 1.3;
         }
 
-        /* FIX GAMBAR KOMIK PADAT & FULL TANPA HITAM DI SAMPING */
+        /* COMIC SECTION PERFECTION (UTUH 100% TANPA KEPOTONG & PAS FULL LEBAR) */
         .comic-box {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -309,19 +309,17 @@
 
         .comic-cover-img {
             width: 100%;
-            height: 340px; /* Dipertinggi sedikit agar menampilkan lebih banyak area komik */
-            object-fit: cover; /* Mengisi penuh kartu tanpa sisa hitam di pinggir */
-            object-position: top center; /* Fokus pada judul & wajah karakter */
+            height: auto; /* Mengikuti tinggi alami gambar */
             display: block;
             transition: transform 0.4s ease;
         }
 
         .comic-cover-link:hover .comic-cover-img {
-            transform: scale(1.03);
+            transform: scale(1.02);
         }
 
         .comic-cover-placeholder {
-            height: 340px;
+            min-height: 250px;
             background: linear-gradient(135deg, #111, #1a2e1b);
             display: flex;
             align-items: center;
