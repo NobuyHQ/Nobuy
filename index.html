@@ -179,19 +179,22 @@
             box-shadow: 0 0 25px var(--green-glow);
         }
 
+        /* Dibuat Persegi Simetris & Auto Adaptif */
         .main-char-img-wrap {
             width: 100%;
-            height: 220px;
+            height: auto;
+            aspect-ratio: 1 / 1;
             overflow: hidden;
             background: #000;
             position: relative;
         }
 
+        /* Gambar Dipaksa Masuk Semua Tanpa Kepotong */
         .main-char-img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            object-position: top center;
+            object-fit: contain;
+            object-position: center;
             transition: transform 0.5s ease;
         }
 
